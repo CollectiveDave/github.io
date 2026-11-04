@@ -1,29 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #24292e; }
-        h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-        .links a { margin-right: 15px; color: #0366d6; text-decoration: none; }
-        .links a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dave Collins — Senior PMO &amp; QA Leader</title>
+  <meta name="description" content="Dave Collins is a senior PMO and QA leader in game production and software operations. Resume, shipped titles, and introduction.">
+  <meta name="author" content="Dave Collins">
+  <meta name="theme-color" content="#14211c">
+  <link rel="canonical" href="https://applieddave.github.io/">
+  <meta property="og:title" content="Dave Collins — Senior PMO &amp; QA Leader">
+  <meta property="og:description" content="Game production, QA leadership, and software operations. Introduction and resume.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://applieddave.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,560;1,6..72,450&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dave Collins",
+    "jobTitle": "Senior PMO & QA Leader",
+    "email": "mailto:wildshroom@me.com",
+    "telephone": "+1-727-304-4353",
+    "url": "https://applieddave.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/collinsdavew",
+      "https://github.com/AppliedDave",
+      "https://github.com/CollectiveDave"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #17211c;
+      --pine: #14211c;
+      --pine-2: #1d312a;
+      --paper: #f3efe6;
+      --paper-2: #e7e1d4;
+      --brass: #8a5a22;
+      --brass-bright: #c6a36a;
+      --muted: #5e675f;
+      --line: rgba(23, 33, 28, 0.14);
+      --serif: "Newsreader", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+      --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--brass);
+      outline-offset: 3px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(240px, 300px) 1fr;
+      min-height: 100vh;
+    }
+    .identity {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 2.4rem 1.7rem 1.6rem;
+      background: var(--pine);
+      color: #f6f1e6;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      overflow: auto;
+    }
+    .identity .eyebrow {
+      margin: 0 0 0.7rem;
+      color: var(--brass-bright);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .identity h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: clamp(2.4rem, 3vw, 3.1rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+    }
+    .identity .role {
+      margin: 0.85rem 0 0;
+      color: #d9d2c4;
+      font-size: 0.98rem;
+      font-weight: 300;
+      line-height: 1.45;
+    }
+    .contact {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.45rem;
+    }
+    .contact a {
+      color: #f6f1e6;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    .contact a:hover { border-bottom-color: var(--brass-bright); }
+    .contact li { font-size: 0.95rem; }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.35rem;
+    }
+    nav a {
+      color: #cfc6b6;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    nav a:hover { color: #fff; }
+    .download {
+      margin-top: auto;
+      display: inline-block;
+      width: fit-content;
+      padding: 0.55rem 0.85rem;
+      border: 1px solid var(--brass-bright);
+      color: var(--brass-bright);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .download:hover { background: var(--brass-bright); color: var(--pine); }
+    main {
+      padding: 3.2rem 6vw 4.5rem;
+      max-width: 980px;
+    }
+    .letter h2 {
+      margin: 0 0 1.1rem;
+      font-family: var(--serif);
+      font-weight: 450;
+      font-style: italic;
+      font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+    .kicker {
+      margin: 0 0 0.7rem;
+      color: var(--brass);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .letter p { margin: 0 0 1rem; max-width: 42rem; }
+    .letter a { color: var(--brass); }
+    .signoff {
+      margin-top: 1.4rem;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.25rem;
+    }
+    .signoff p { margin: 0; }
+    section { margin-top: 3.2rem; }
+    section h2.section-title {
+      margin: 0 0 1rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+    .summary { max-width: 44rem; margin: 0; }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .chips li {
+      padding: 0.28rem 0.65rem;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.35);
+      font-size: 0.92rem;
+    }
+    .job { padding: 1.15rem 0 1.25rem; border-bottom: 1px solid var(--line); }
+    .job:first-of-type { padding-top: 0.2rem; }
+    .job header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .job h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 560;
+      line-height: 1.2;
+    }
+    .job .meta {
+      margin: 0.15rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .job .dates {
+      margin: 0;
+      white-space: nowrap;
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+    }
+    .job ul { margin: 0.7rem 0 0; padding: 0 0 0 1.1rem; }
+    .job li { margin: 0.35rem 0; max-width: 46rem; }
+    .job li::marker { color: var(--brass); }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .edu h3, .certs h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+      font-weight: 560;
+    }
+    .edu p, .certs p { margin: 0 0 0.9rem; color: var(--muted); }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .identity {
+        position: relative;
+        height: auto;
+        padding: 1.6rem 1.25rem 1.3rem;
+      }
+      .download { margin-top: 0.4rem; }
+      main { padding: 1.8rem 1.25rem 3rem; }
+      .job header { flex-direction: column; gap: 0.15rem; }
+      .split { grid-template-columns: 1fr; gap: 0.4rem; }
+    }
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .layout { display: block; }
+      .identity {
+        position: static;
+        height: auto;
+        background: white;
+        color: black;
+        padding: 0 0 1rem;
+        border-bottom: 1px solid #ccc;
+      }
+      .identity .eyebrow, .identity .role, .contact a { color: black; }
+      nav, .download { display: none; }
+      main { padding: 1rem 0 0; max-width: none; }
+      a { text-decoration: none; }
+      .letter h2 { font-size: 18pt; }
+      .job { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hi, I'm a Software Developer 👋</h1>
-    <p>Welcome to my portfolio website. I specialize in backend architecture, modular layout systems, and custom database engineering.</p>
-    
-    <h2>Featured Projects</h2>
-    <ul>
-        <li><strong>Project57:</strong> A modular mobile game built using Unity 2D featuring robust state management and automated monetization systems.</li>
-    </ul>
-
-    <h2>Connect with Me</h2>
-    <div class="links">
-        <a href="https://github.com/yourusername">GitHub Profile</a>
-        <!-- Add your LinkedIn, email, or other social links here -->
-    </div>
+  <div class="layout">
+    <aside class="identity">
+      <div>
+        <p class="eyebrow">Game production<br>Software operations</p>
+        <h1>Dave Collins</h1>
+        <p class="role">Senior PMO &amp; QA Leader</p>
+      </div>
+      <ul class="contact">
+        <li><a href="mailto:wildshroom@me.com">wildshroom@me.com</a></li>
+        <li><a href="tel:+17273044353">727-304-4353</a></li>
+        <li><a href="https://www.linkedin.com/in/collinsdavew">linkedin.com/in/collinsdavew</a></li>
+        <li><a href="https://github.com/AppliedDave">github.com/AppliedDave</a></li>
+      </ul>
+      <nav aria-label="Page">
+        <ul>
+          <li><a href="#letter">Introduction</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#titles">Titles shipped</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ul>
+      </nav>
+      <a class="download" href="Dave_Collins_Resume.pdf">Download résumé</a>
+    </aside>
+    <main>
+      <section class="letter" id="letter" aria-labelledby="letter-heading">
+        <p class="kicker">Introduction</p>
+        <h2 id="letter-heading">Gaming has been part of my life for over four decades, across just about every genre and platform.</h2>
+        <p>My relationship with games goes well beyond playing them. I started working on games from home in 1994, contributing to Usurper, a DOS-based BBS game. That early experience eventually grew into a career spanning decades in game development, production, QA, and product leadership.</p>
+        <p>I'm very familiar with the gaming industry, its communities, competitive environments, and the design decisions that keep players engaged. My familiarity with League of Legends comes from understanding the MOBA genre, its mechanics, competitive ecosystem, and player culture. While my professional experience spans a broad range of games, I appreciate what makes League a lasting and influential part of the industry.</p>
+        <p>You can see more work contributions here:</p>
+        <p>
+          <a href="https://github.com/AppliedDave">github.com/AppliedDave</a><br>
+          <a href="https://github.com/CollectiveDave">github.com/CollectiveDave</a>
+        </p>
+        <p>A GitHub profile: <a href="https://applieddave.github.io/">applieddave.github.io</a></p>
+        <div class="signoff">
+          <p>Best regards,</p>
+          <p>Dave</p>
+        </div>
+      </section>
+      <section id="summary">
+        <h2 class="section-title">Professional summary</h2>
+        <p class="summary">What distinguishes me is not having managed projects; it is that I have consistently improved delivery systems that did not work, decreased waste, improved predictability, and created scalable business decisions. Decreased defect leakage rates, increased release predictability, shorter lead times for feature releases, reduced infrastructure expenses, and installation of production tools. I have contributed to and led a multitude of shipped projects.</p>
+      </section>
+      <section id="competencies">
+        <h2 class="section-title">Core competencies</h2>
+        <ul class="chips">
+          <li>Agile / Waterfall / Hybrid</li>
+          <li>Project budgets and profitability</li>
+          <li>Large-scale project delivery</li>
+          <li>Live operations and game production</li>
+          <li>Quality assurance leadership</li>
+          <li>UI/UX team production support</li>
+          <li>PC, console, and mobile</li>
+          <li>CI/CD and DevOps collaboration</li>
+          <li>AI-driven workflow automation</li>
+          <li>Stakeholder and executive communication</li>
+          <li>Vendor management</li>
+          <li>Risk management and mitigation</li>
+          <li>Budgeting and financial oversight</li>
+          <li>Change management</li>
+          <li>Reporting metrics and capacity planning</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Head of Product Development</h3>
+              <p class="meta">Applied Game Designs · Remote</p>
+            </div>
+            <p class="dates">Jan 2025 – Present</p>
+          </header>
+          <ul>
+            <li>Product vision and production strategy for multiple Unity-based live service mobile titles simultaneously across design, engineering, QA, and UI/UX. Coordinating daily with discipline-specific producers and leads within a cross-functional team environment.</li>
+            <li>Led the overall QA strategy and designed the test automation architecture.</li>
+            <li>Actively embedded with the UI/UX team to drive feature scope, feedback loops, and sprint deliverables, ensuring design intent is translated cleanly into shippable builds.</li>
+            <li>Define scope, deliverables, success metrics, and timelines; drive risk identification and mitigation strategies to maintain delivery predictability across distributed teams.</li>
+            <li>Define feature roadmaps, monetization frameworks, and sprint cadences; reduce cross-team rework via structured intake and dependency mapping.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Lead Producer</h3>
+              <p class="meta">Marauder Tech · Remote</p>
+            </div>
+            <p class="dates">Mar 2024 – Jan 2025</p>
+          </header>
+          <ul>
+            <li>Managed multiple concurrent projects with cross-functional teams within a broader multi-studio organization; deployed Jira, Confluence, Jenkins, and TestRail in under 60 days.</li>
+            <li>Defined automated QA efforts while establishing the framework and architecture for automated testing.</li>
+            <li>Developed detailed project plans including milestones, schedules, and dependencies; coordinated production across shared engineering and UI/UX resources alongside a wider producer team.</li>
+            <li>Improved sprint delivery predictability through capacity planning, Agile best practices, and a consolidated stakeholder reporting dashboard.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>QA Manager</h3>
+              <p class="meta">Intrepid Studios · Remote</p>
+            </div>
+            <p class="dates">Oct 2023 – Mar 2024</p>
+          </header>
+          <ul>
+            <li>Built and mentored a QA org embedded within a large-scale PC MMO production (200+ person team); reduced critical-defect escape rate via triage and regression systems.</li>
+            <li>Integrated QA directly into production pipelines for scalable release readiness; partnered with UI/UX leads to validate interface builds against accessibility and usability standards.</li>
+            <li>Oversaw risk-based testing strategies integrated into Agile workflows; managed team capacity planning and delivery timelines to ensure milestone stability.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Technical Producer</h3>
+              <p class="meta">Two Dots · Take-Two Interactive</p>
+            </div>
+            <p class="dates">Nov 2021 – May 2023</p>
+          </header>
+          <ul>
+            <li>Operated as part of a structured producer team within a large studio environment (100+ staff org); directed end-to-end delivery of high-visibility features for live mobile titles.</li>
+            <li>Coordinated cross-functional stakeholders across engineering, UI/UX, art, and product teams; managed roadmap planning, risk mitigation, and post-launch reviews.</li>
+            <li>Introduced capacity planning via Jira that lifted on-time sprint completion; reduced AWS infrastructure costs through observability tooling and resource right-sizing.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Technical Project Manager</h3>
+              <p class="meta">Spirion</p>
+            </div>
+            <p class="dates">Apr 2020 – Oct 2021</p>
+          </header>
+          <ul>
+            <li>Led enterprise SaaS project delivery with strict compliance and uptime requirements; owned project scope, budgeting, and resource allocation across multiple concurrent client engagements.</li>
+            <li>Facilitated stakeholder communication across technical and executive teams; aligned engineering execution with regulatory and business requirements through structured feature intake and backlog management.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Head of Quality Assurance</h3>
+              <p class="meta">Wizards of the Coast</p>
+            </div>
+            <p class="dates">Oct 2019 – Mar 2020</p>
+          </header>
+          <ul>
+            <li>Overhauled QA operations across Magic: The Gathering Arena — a large-scale PC and mobile title (200+ person team) — within a multi-producer production structure.</li>
+            <li>Streamlined validation workflows, eliminating $1.8M in operational inefficiencies through process redesign and team restructuring.</li>
+            <li>Resolved long-standing certification blockers with external platform partners, reducing cert cycle time across PC and planned console certification pipelines.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Product Manager</h3>
+              <p class="meta">Modus Create</p>
+            </div>
+            <p class="dates">Oct 2017 – Oct 2019</p>
+          </header>
+          <ul>
+            <li>Delivered product roadmaps for numerous enterprise clients simultaneously across PC and web platforms; improved forecast accuracy through standardized reporting frameworks and backlog governance.</li>
+            <li>Supported platform migration and porting workstreams for clients moving products across environments, coordinating technical and UX alignment between origin and target platforms.</li>
+            <li>Managed resources, schedules, and roadmaps aligned to business goals; drove risk identification and stakeholder alignment across concurrent engagements.</li>
+          </ul>
+        </article>
+      </section>
+      <div class="split">
+        <section id="education" class="edu">
+          <h2 class="section-title">Education</h2>
+          <h3>MS Applied Artificial Intelligence</h3>
+          <p>Neumont University · In progress</p>
+          <h3>Bachelor of Science, Computer Science</h3>
+          <p>University of Washington</p>
+        </section>
+        <section id="certifications" class="certs">
+          <h2 class="section-title">Certifications</h2>
+          <h3>Certified Scrum Master (CSM)</h3>
+          <h3>Certified Scrum Product Owner (CSPO)</h3>
+          <h3>Certified Scrum Professional (CSP)</h3>
+          <h3>PMI-ACP · CAPM</h3>
+          <h3>Atlassian ACP-JSW · AC-JPA</h3>
+        </section>
+      </div>
+      <section id="titles">
+        <h2 class="section-title">Notable titles shipped</h2>
+        <ul class="chips">
+          <li>Magic: The Gathering Arena (PC)</li>
+          <li>EVE Online (PC)</li>
+          <li>Half-Life (PC)</li>
+          <li>Age of Empires (PC)</li>
+          <li>Empire Earth (PC)</li>
+          <li>Tribes 2 (PC)</li>
+          <li>Crimson Skies (PC/Xbox)</li>
+          <li>Midtown Madness (PC)</li>
+          <li>MechCommander (PC)</li>
+          <li>Flight Simulator (PC)</li>
+          <li>Arcanum (PC)</li>
+          <li>Kingdoms of Camelot</li>
+          <li>War Commander</li>
+          <li>Battle Pirates</li>
+          <li>Two Dots (Mobile)</li>
+          <li>Garden Tails (Mobile)</li>
+          <li>Fashion &amp; Fame</li>
+          <li>Dragon Conquest</li>
+          <li>Rife and Ruin</li>
+          <li>Fehlbound</li>
+        </ul>
+      </section>
+      <section id="tools">
+        <h2 class="section-title">Tools and technologies</h2>
+        <ul class="chips">
+          <li>AI tooling</li>
+          <li>Unity</li>
+          <li>Unreal</li>
+          <li>Jira (Advanced)</li>
+          <li>Confluence</li>
+          <li>Jenkins / CircleCI / TravisCI</li>
+          <li>Perforce</li>
+          <li>Git</li>
+          <li>TestRail</li>
+          <li>Datadog</li>
+          <li>New Relic</li>
+          <li>Cucumber / Gherkin</li>
+          <li>Rally</li>
+          <li>MS Project</li>
+          <li>C#</li>
+          <li>C++</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </section>
+      <footer>
+        <p>Dave Collins · Senior PMO &amp; QA Leader</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
