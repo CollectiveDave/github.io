@@ -144,7 +144,7 @@
     .marquee-track {
       display: flex;
       width: max-content;
-      animation: tick 32s linear infinite;
+      animation: tick 90s linear infinite;
     }
     .marquee-track span {
       font-family: var(--pixel);
@@ -207,7 +207,7 @@
       border-radius: 50%;
       background: var(--yellow);
       box-shadow: 0 0 10px rgba(255, 225, 74, 0.7);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 64%, 46% 50%, 0 36%, 0 0);
+      clip-path: polygon(0 0, 100% 0, 100% 36%, 54% 50%, 100% 64%, 100% 100%, 0 100%);
       animation: bite 0.32s steps(2, end) infinite;
     }
     @keyframes bite {
@@ -346,7 +346,7 @@
       border-radius: 50%;
       background: var(--yellow);
       box-shadow: 0 0 10px rgba(255, 225, 74, 0.65);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 62%, 42% 50%, 0 38%);
+      clip-path: polygon(0 0, 100% 0, 100% 38%, 58% 50%, 100% 62%, 100% 100%, 0 100%);
       animation: run 7s linear infinite, bite 0.28s steps(2, end) infinite;
     }
     @keyframes run {
@@ -642,46 +642,37 @@
     </div>
     <div class="marquee">
       <div class="marquee-track">
-        <span>DEFENDER&nbsp;&nbsp;·&nbsp;&nbsp;GALAGA&nbsp;&nbsp;·&nbsp;&nbsp;PAC-MAN&nbsp;&nbsp;·&nbsp;&nbsp;ASTEROIDS&nbsp;&nbsp;·&nbsp;&nbsp;SPACE INVADERS&nbsp;&nbsp;·&nbsp;&nbsp;MARIO&nbsp;&nbsp;·&nbsp;&nbsp;DONKEY KONG&nbsp;&nbsp;·&nbsp;&nbsp;MIKE TYSON'S PUNCH-OUT&nbsp;&nbsp;·&nbsp;&nbsp;TEMPEST&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-        <span>DEFENDER&nbsp;&nbsp;·&nbsp;&nbsp;GALAGA&nbsp;&nbsp;·&nbsp;&nbsp;PAC-MAN&nbsp;&nbsp;·&nbsp;&nbsp;ASTEROIDS&nbsp;&nbsp;·&nbsp;&nbsp;SPACE INVADERS&nbsp;&nbsp;·&nbsp;&nbsp;MARIO&nbsp;&nbsp;·&nbsp;&nbsp;DONKEY KONG&nbsp;&nbsp;·&nbsp;&nbsp;MIKE TYSON'S PUNCH-OUT&nbsp;&nbsp;·&nbsp;&nbsp;TEMPEST&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+        <span>MAGIC: THE GATHERING ARENA&nbsp;&nbsp;·&nbsp;&nbsp;EVE ONLINE&nbsp;&nbsp;·&nbsp;&nbsp;HALF-LIFE&nbsp;&nbsp;·&nbsp;&nbsp;AGE OF EMPIRES&nbsp;&nbsp;·&nbsp;&nbsp;EMPIRE EARTH&nbsp;&nbsp;·&nbsp;&nbsp;TRIBES 2&nbsp;&nbsp;·&nbsp;&nbsp;CRIMSON SKIES&nbsp;&nbsp;·&nbsp;&nbsp;MIDTOWN MADNESS&nbsp;&nbsp;·&nbsp;&nbsp;MECHCOMMANDER&nbsp;&nbsp;·&nbsp;&nbsp;FLIGHT SIMULATOR&nbsp;&nbsp;·&nbsp;&nbsp;ARCANUM&nbsp;&nbsp;·&nbsp;&nbsp;KINGDOMS OF CAMELOT&nbsp;&nbsp;·&nbsp;&nbsp;WAR COMMANDER&nbsp;&nbsp;·&nbsp;&nbsp;BATTLE PIRATES&nbsp;&nbsp;·&nbsp;&nbsp;TWO DOTS&nbsp;&nbsp;·&nbsp;&nbsp;GARDEN TAILS&nbsp;&nbsp;·&nbsp;&nbsp;FASHION &amp; FAME&nbsp;&nbsp;·&nbsp;&nbsp;DRAGON CONQUEST&nbsp;&nbsp;·&nbsp;&nbsp;RIFE AND RUIN&nbsp;&nbsp;·&nbsp;&nbsp;PARAGON OF BLIGHTBORN&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+        <span>MAGIC: THE GATHERING ARENA&nbsp;&nbsp;·&nbsp;&nbsp;EVE ONLINE&nbsp;&nbsp;·&nbsp;&nbsp;HALF-LIFE&nbsp;&nbsp;·&nbsp;&nbsp;AGE OF EMPIRES&nbsp;&nbsp;·&nbsp;&nbsp;EMPIRE EARTH&nbsp;&nbsp;·&nbsp;&nbsp;TRIBES 2&nbsp;&nbsp;·&nbsp;&nbsp;CRIMSON SKIES&nbsp;&nbsp;·&nbsp;&nbsp;MIDTOWN MADNESS&nbsp;&nbsp;·&nbsp;&nbsp;MECHCOMMANDER&nbsp;&nbsp;·&nbsp;&nbsp;FLIGHT SIMULATOR&nbsp;&nbsp;·&nbsp;&nbsp;ARCANUM&nbsp;&nbsp;·&nbsp;&nbsp;KINGDOMS OF CAMELOT&nbsp;&nbsp;·&nbsp;&nbsp;WAR COMMANDER&nbsp;&nbsp;·&nbsp;&nbsp;BATTLE PIRATES&nbsp;&nbsp;·&nbsp;&nbsp;TWO DOTS&nbsp;&nbsp;·&nbsp;&nbsp;GARDEN TAILS&nbsp;&nbsp;·&nbsp;&nbsp;FASHION &amp; FAME&nbsp;&nbsp;·&nbsp;&nbsp;DRAGON CONQUEST&nbsp;&nbsp;·&nbsp;&nbsp;RIFE AND RUIN&nbsp;&nbsp;·&nbsp;&nbsp;PARAGON OF BLIGHTBORN&nbsp;&nbsp;·&nbsp;&nbsp;</span>
       </div>
     </div>
     <div class="icon-rail">
       <div class="ico-wrap">
         <svg class="sprite sprite-wide" viewBox="0 0 56 24"><use href="#i-defender"/></svg>
-        <span>DEFENDER</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 32 32"><use href="#i-galaga"/></svg>
-        <span>GALAGA</span>
       </div>
       <div class="ico-wrap">
-        <div class="pac-row"><span class="pellet"></span><span class="pellet"></span><span class="chomp"></span></div>
-        <span>PAC-MAN</span>
+        <div class="pac-row"><span class="chomp"></span><span class="pellet"></span><span class="pellet"></span></div>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 32 32"><use href="#i-asteroids"/></svg>
-        <span>ASTEROIDS</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 24 16" width="42" height="28"><use href="#i-invader"/></svg>
-        <span>INVADERS</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 16 16" width="36" height="36"><use href="#i-mario"/></svg>
-        <span>MARIO</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 32 32"><use href="#i-dk"/></svg>
-        <span>D.K.</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite sprite-wide" viewBox="0 0 36 24"><use href="#i-punch"/></svg>
-        <span>PUNCH-OUT</span>
       </div>
       <div class="ico-wrap">
         <svg class="sprite" viewBox="0 0 32 32"><use href="#i-tempest"/></svg>
-        <span>TEMPEST</span>
       </div>
     </div>
   </header>
